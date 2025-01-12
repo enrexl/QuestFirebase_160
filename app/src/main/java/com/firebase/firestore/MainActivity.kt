@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.firebase.firestore.ui.navigation.PengelolaHalaman
 import com.firebase.firestore.ui.theme.FireStoreTheme
 import com.firebase.firestore.ui.view.HomeView
 
@@ -21,8 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             FireStoreTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    HomeView(navigateToItemEntry = {}
-                        ,modifier = Modifier.padding(innerPadding))
+                    PengelolaHalaman(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
