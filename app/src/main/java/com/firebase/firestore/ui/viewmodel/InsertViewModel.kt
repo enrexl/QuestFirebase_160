@@ -12,6 +12,15 @@ class InsertViewModel(
 
 }
 
+data class MahasiswaEvent(
+    val nim: String = "",
+    val nama: String = "",
+    val jenisKelamin: String = "",
+    val alamat: String = "",
+    val kelas: String = "",
+    val angkatan: String = "",
+)
+
 
 // Menyimpan input form ke dalam entity
 fun MahasiswaEvent.toMhsModel(): Mahasiswa = Mahasiswa(
