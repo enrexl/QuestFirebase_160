@@ -7,7 +7,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.firebase.firestore.ui.view.HomeView
 import com.firebase.firestore.ui.view.InsertView
-import java.lang.reflect.Modifier
+import androidx.compose.ui.Modifier
+
 
 @Composable
 fun PengelolaHalaman(
@@ -18,6 +19,7 @@ fun PengelolaHalaman(
     NavHost(
         navController = navController,
         startDestination = DestinasiHome.route,
+        modifier = Modifier
     ) {
         composable(DestinasiHome.route) {
             HomeView(
