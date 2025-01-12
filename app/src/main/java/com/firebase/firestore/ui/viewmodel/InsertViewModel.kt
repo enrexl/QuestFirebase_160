@@ -12,6 +12,11 @@ class InsertViewModel(
 
 }
 
+data class  InsertUiState(
+    val insertUiState: MahasiswaEvent = MahasiswaEvent(),
+    val isEntyValid: FormErrorState = FormErrorState()
+)
+
 data class FormErrorState(
     val nim: String? = null,
     val nama: String? = null,
