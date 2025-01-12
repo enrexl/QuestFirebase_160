@@ -1,5 +1,6 @@
 package com.firebase.firestore.ui.viewmodel
 
+import androidx.compose.material3.formatWithSkeleton
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -66,8 +67,9 @@ class InsertViewModel(
         uiState = FormState.Idle
     }
 
-
-
+    fun resetSnackBarMessage(){
+        uiState = FormState.Idle
+    }
 }
 
 sealed class FormState{
