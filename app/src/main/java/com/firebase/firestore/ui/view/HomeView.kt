@@ -169,10 +169,10 @@ fun MhsLayout(
                 mahasiswa = mhs,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clickable { onDetailClick(mhs) }
-            ) {
+                    .clickable { onDetailClick(mhs) },
+                onDeleteClick = {
                 onDeleteClick(it)
-            }
+            })
         }
     }
 }
@@ -181,7 +181,7 @@ fun MhsLayout(
 fun MhsCard(
     mahasiswa: Mahasiswa,
     modifier: Modifier = Modifier,
-    onDeleteClick: (Mahasiswa) -> Unit = {}
+    onDeleteClick: (String) -> Unit = {}
 ){
     Card(
         modifier = modifier,
@@ -201,7 +201,7 @@ fun MhsCard(
                     style = MaterialTheme.typography.titleLarge,
                 )
                 Spacer(Modifier.weight(1f))
-                IconButton(onClick = {onDeleteClick(mahasiswa)})//ditmabah nim
+                IconButton(onClick = {onDeleteClick(mahasiswa.nim)})//ditmabah nim
                  {
                     Icon(
                         imageVector = Icons.Default.Delete,
