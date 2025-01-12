@@ -36,12 +36,13 @@ class HomeViewModel(
                 .catch {
                     mhsUiState = HomeUiState.Error(it)
                 }
-            mhsUiState = if(it.isEmpty()){
-                    HomeUiState.Error(Exception("blm ada daftar mhs"))
+                .collect {
+                    mhsUiState = if (it.isEmpty()) {
+                        HomeUiState.Error(Exception("blm ada daftar mhs"))
+                    } else {
+                        HomeUiState.Success(it)
+                    }
                 }
-                else{
-                HomeUiState.Success(it)
-            }
         }
     }
 }
