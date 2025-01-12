@@ -2,7 +2,8 @@
 
 
 ### FireStore before & after 
-![Screenshot 2025-01-12 114532 (Phone)](https://github.com/user-attachments/assets/8e40a68c-d124-48ab-a8dd-6ba1c4eea8b6)![Screenshot 2025-01-12 114509 (Phone)](https://github.com/user-attachments/assets/2896869c-75c9-4a20-9b23-ac700ea52c67)
+
+![Screenshot 2025-01-12 114532 (Phone) (1)](https://github.com/user-attachments/assets/3679135e-9e86-4663-8387-b832e1019cad)![Screenshot 2025-01-12 114509 (Phone) (1)](https://github.com/user-attachments/assets/59aa71f6-374b-4e8f-9ee2-4d45760eae6f)
 
 
 
