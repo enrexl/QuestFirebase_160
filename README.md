@@ -1,5 +1,5 @@
 #### UCP2 error di detailViewModel 
-![Screenshot 2025-01-15 105015 (Phone)](https://github.com/user-attachments/assets/e61af1a2-c55d-4c9f-a57f-211d3e505af6) ![Screenshot 2025-01-15 104803 (Phone)](https://github.com/user-attachments/assets/ae22bcf0-bdd2-4558-a35d-13d8862ac310) ![Screenshot 2025-01-15 104748 (Phone)](https://github.com/user-attachments/assets/4c00b915-b786-4b15-9c62-ec2718ba8d01)
+![Screenshot 2025-01-15 105015 (Phone)](https://github.com/user-attachments/assets/e61af1a2-c55d-4c9f-a57f-211d3e505af6) ![Screenshot 2025-01-15 104803 (Phone)](https://github.com/user-attachments/assets/ae22bcf0-bdd2-4558-a35d-13d8862ac310) ![Screenshot 2025-01-15 110905 (Phone)](https://github.com/user-attachments/assets/ee5170b3-496c-4fbe-9b93-7ef86e69cf54)
 
 #### UCP2 firestore
 ![Screenshot 2025-01-15 105155 (Phone)](https://github.com/user-attachments/assets/13141dff-a339-4176-85bc-720e53faada5)
