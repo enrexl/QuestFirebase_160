@@ -9,8 +9,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -87,13 +89,14 @@ fun InsertView(
                 title = {Text("Tambah Mahasiswa")},
                 navigationIcon = {Button(onClick = onBack) {Text("Back") }}
             )
-        }
+        },
     ) { padding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
                 .padding(16.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             InsertBodyMhs(
                 uiState = uiEvent,
@@ -143,6 +146,7 @@ fun InsertBodyMhs(
     }
 }
 }
+
 
 @Composable
 fun FormMahasiswa(
@@ -235,5 +239,35 @@ fun FormMahasiswa(
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
         )
         Text(text = errorState.angkatan?:"", color = Color.Red)
+
+        OutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
+            value = mahasiswaEvent.judul,
+            onValueChange = {onValueChange(mahasiswaEvent.copy(judul = it))},
+            label = {Text("Judul Skripsi")},
+            placeholder = {Text("Masukkan Judul Skripsi")},
+
+        )
+        Text(text = errorState.judul?:"", color = Color.Red)
+
+        OutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
+            value = mahasiswaEvent.dosen1,
+            onValueChange = {onValueChange(mahasiswaEvent.copy(dosen1 = it))},
+            label = {Text("Dosen Pembimbing 1")},
+            placeholder = {Text("Masukkan Nama Dosen Pembimbing 1")},
+
+        )
+        Text(text = errorState.dosen1?:"", color = Color.Red)
+
+        OutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
+            value = mahasiswaEvent.dosen2,
+            onValueChange = {onValueChange(mahasiswaEvent.copy(dosen2 = it))},
+            label = {Text("Dosen Pembimbing 2")},
+            placeholder = {Text("Masukkan Nama Dosen Pembimbing 1")},
+
+        )
+        Text(text = errorState.dosen2?:"", color = Color.Red)
     }
 }

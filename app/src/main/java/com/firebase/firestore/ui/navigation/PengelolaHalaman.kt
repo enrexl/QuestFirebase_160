@@ -8,6 +8,9 @@ import androidx.navigation.compose.rememberNavController
 import com.firebase.firestore.ui.view.HomeView
 import com.firebase.firestore.ui.view.InsertView
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavType
+import androidx.navigation.navArgument
+import com.firebase.firestore.ui.view.DetailView
 
 
 @Composable
@@ -26,6 +29,10 @@ fun PengelolaHalaman(
                 navigateToItemEntry = {
                     navController.navigate(DestinasiInsert.route)
                 },
+                onDetailClick = {
+                    navController.navigate(DestinasiDetail.route)
+                }
+
             )
         }
         composable(DestinasiInsert.route) {
@@ -36,6 +43,25 @@ fun PengelolaHalaman(
                 }
             )
         }
+
+        // Detail Screen
+        composable(
+            route = "${DestinasiDetail.route}/{nim}",
+            arguments = listOf(
+                navArgument("nim") { type = NavType.StringType }
+            )
+        ) { backStackEntry ->
+            val nim = backStackEntry.arguments?.getString("nim") // Ambil argumen nim
+            nim?.let {
+                DetailView(
+                    nim = it,
+                    navigateBack = { navController.popBackStack() },
+                )
+            }
+        }
+
+        //Detail 2
+
     }
 }
 
